@@ -11,6 +11,14 @@ function start() {
     population_size = document.querySelector("#population").value;
     mutation_probability = document.querySelector("#p_m").value;
     crossOver_probability = document.querySelector("#p_c").value;
+    
+    //Check if possible
+    for(let i = 0;i<target.length;i++){
+        if(!genes.includes(target[i])){
+            alert(`Character ${target[i]} doesn't belong to Genes. Operation Canceled`);
+            return 0
+        }
+    }
     let iterations = 0;
     let population = [];
     let bestFitness = 0;
