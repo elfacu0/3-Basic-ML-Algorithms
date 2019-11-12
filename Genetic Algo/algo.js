@@ -16,8 +16,20 @@ function start() {
     for(let i = 0;i<target.length;i++){
         if(!genes.includes(target[i])){
             alert(`Character ${target[i]} doesn't belong to Genes. Operation Canceled`);
-            return 0
+            return ''
         }
+    }
+    if(population_size<=10){
+        alert("Population too small");
+        return ''
+    }
+    if(crossOver_probability<=10){
+        alert("CrossOver Probability too small");
+        return ''
+    }
+    if(mutation_probability<1){
+        alert("Mutation Probability too small");
+        return ''
     }
     let iterations = 0;
     let population = [];
