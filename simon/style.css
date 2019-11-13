@@ -1,0 +1,151 @@
+* {
+    margin: 0px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.input>button {
+    position: relative;
+}
+
+.score, .maxscore {
+    top: 0px;
+    position: absolute;
+    font-size: 2rem;
+}
+
+.score {
+    top: 30px;
+}
+
+.simonPosition {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: gray;
+}
+
+.simon {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background: black;
+    border-radius: 50%;
+    flex-direction: column;
+}
+
+.upperHalf {
+    display: flex;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+}
+
+.upperHalf>* {
+    transition: 100ms;
+}
+
+.lowerHalf {
+    display: flex;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+}
+
+.lowerHalf>* {
+    transition: 100ms;
+}
+
+.simonCenter {
+    position: absolute;
+    display: flex;
+    top: 30%;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 200px;
+    background: black;
+    border-radius: 50%;
+}
+
+.simonCenter>p {
+    display: flex;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.simonGreen {
+    display: flex;
+    background: green;
+    width: 40%;
+    height: 80%;
+    margin-top: 8%;
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+    border-style: none;
+}
+
+.simonRed {
+    display: flex;
+    background: red;
+    width: 40%;
+    height: 80%;
+    margin-top: 8%;
+    border-radius: 0% 100% 100% 0% / 100% 100% 0% 0%;
+    border-style: none;
+}
+
+.simonYellow {
+    display: flex;
+    background: yellow;
+    width: 40%;
+    height: 80%;
+    margin-top: 3%;
+    border-radius: 100% 0% 0% 100% / 0% 100% 0% 100%;
+    border-style: none;
+}
+
+.simonBlue {
+    display: flex;
+    background: blue;
+    width: 40%;
+    height: 80%;
+    margin-top: 3%;
+    border-radius: 100% 0% 100% 0% / 0% 0% 100% 100%;
+    border-style: none;
+}
+
+.light {
+    transition: 200ms;
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    .simon {
+        width: 300px;
+        height: 300px;
+    }
+    .simonCenter {
+        height: 120px;
+        width: 120px;
+    }
+}
